@@ -12,7 +12,7 @@ public class ShootWatergun : MonoBehaviour
     void Start()
     {
         waterGunCollider = GetComponent<CircleCollider2D>();
-        waterGun.transform.position = new Vector3(0f, 0f, -1f);
+        waterGun.transform.position = new Vector3(0f, 0f, 1f);
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class ShootWatergun : MonoBehaviour
         {
             waterGun.transform.position = new Vector3(0f, 0f, -1f);
             waterGun.transform.localScale = new Vector3(.1f, .1f, 0);
-            
         }
+
     }
 }
