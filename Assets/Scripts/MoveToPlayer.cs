@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MoveToPlayer : MonoBehaviour
 {
-
+    public Rigidbody2D rBody;
+    public float speed;
     private GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -13,14 +14,18 @@ public class MoveToPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        moveToPlayer();
+        if(Vector2.Distance(player.transform.position, this.rBody.position) <= 12f)
+        {
+            moveToPlayer();
+        }
     }
 
     void moveToPlayer()
     {
-        Vector3 dirToPlayer = player.transform.position - this.transform.position;
-        this.transform.position += dirToPlayer.normalized * 3f * Time.deltaTime;
+        Vector2 dirToPlayer = player.transform.position - this.transform.position;
+        //this.transform.position += dirToPlayer.normalized * 3f * Time.deltaTime;
+        rBody.MovePosition(rBody.position + dirToPlayer * speed * Time.fixedDeltaTime);
     }
 }

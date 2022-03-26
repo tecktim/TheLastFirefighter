@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746019666367178229}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 38.475594, y: 17.771683, z: -1.7631459}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3886834418233076362}
   - component: {fileID: 7900703677621946277}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

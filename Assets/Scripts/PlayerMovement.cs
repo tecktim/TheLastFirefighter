@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-
-
+    public float speed;
+    public Rigidbody2D rBody;
     private float horizontalInput;
     private float verticalInput;
 
@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
@@ -26,9 +26,9 @@ public class PlayerMovement : MonoBehaviour
 
 
     void movePlayer(){
+        rBody.MovePosition(rBody.position + new Vector2(horizontalInput, verticalInput) * speed * Time.fixedDeltaTime);
 
-
-        this.transform.position += new Vector3(horizontalInput, verticalInput,0f)*5f*Time.deltaTime ;
+        
     }
 
 }
